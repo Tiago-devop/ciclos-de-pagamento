@@ -15,16 +15,13 @@ class Auth extends Component {
     super(props);
     this.state = { loginMode: true };
   }
-
   changeMode() {
     this.setState({ loginMode: !this.state.loginMode });
   }
-
   onSubmit(values) {
     const { login, signup } = this.props;
     this.state.loginMode ? login(values) : signup(values);
   }
-
   render() {
     const { loginMode } = this.state;
     const { handleSubmit } = this.props;
@@ -44,7 +41,6 @@ class Auth extends Component {
               icon="user"
               hide={loginMode}
             />
-
             <Field
               component={Input}
               type="email"
@@ -52,7 +48,6 @@ class Auth extends Component {
               placeholder="E-mail"
               icon="envelope"
             />
-
             <Field
               component={Input}
               type="password"
@@ -60,7 +55,6 @@ class Auth extends Component {
               placeholder="Senha"
               icon="lock"
             />
-
             <Field
               component={Input}
               type="password"
@@ -92,7 +86,6 @@ class Auth extends Component {
     );
   }
 }
-
 Auth = reduxForm({ form: "authForm" })(Auth);
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({ login, signup }, dispatch);
