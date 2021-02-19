@@ -9,6 +9,7 @@ import Row from "../common/layout/row";
 import Grid from "../common/layout/grid";
 import If from "../common/operator/if";
 import Messages from "../common/form/inputAuth";
+import Input from "../common/form/inputAuth";
 
 class Auth extends Component {
   constructor(props) {
